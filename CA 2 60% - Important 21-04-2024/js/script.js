@@ -1,41 +1,49 @@
-const mario = document.querySelector('.mario');
-const pipe = document.querySelector('.pipe');
+const mario = document.querySelector('.mario'); // Selects the Mario element
+const pipe = document.querySelector('.pipe'); // Selects the Pipe element
+const restartButton = document.getElementById('restartButton'); // Selects the restart button
+let gameLoop; // Variable to hold the game loop interval
 
+// Function to make Mario jump
 const jump = () => {
-    mario.classList.add('jump');
-    
+    mario.classList.add('jump'); // Adds the 'jump' class to Mario
     setTimeout(() => {
-        mario.classList.remove('jump');
+        mario.classList.remove('jump'); // Removes the 'jump' class from Mario after a delay
     }, 500);
-
 }
 
-const loop = setInterval(() => {
+// Function to run the game loop
+const loop = () => {
+    const pipePosition = pipe.offsetLeft; // Gets the horizontal position of the pipe
+    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', ''); // Gets the vertical position of Mario
 
-    console.log('loop');
-
-    const pipePosition = pipe.offsetLeft;
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-
+    // Checks if Mario hits the pipe
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition <= 80) {
-       
-        pipe.style.animation = 'none';
-        pipe.style.left = `${pipePosition}px`;
+        endGame(); // Calls the function to end the game
+    }
+};
 
-        mario.style.animation = 'none';
-        mario.style.bottom = `${marioPosition}px`;
+// Function to end the game
+const endGame = () => {
+    clearInterval(gameLoop); // Stops the game loop interval
+    mario.src = '../Images/game-over.png'; // Changes Mario's image to game over
+    restartButton.style.display = 'block'; // Displays the restart button
+};
 
-        mario.src = 'Images/game-over.png';
-        mario.style.width = '75px';
-        mario.style.marginLeft = '50px';
+// Function to restart the game
+const restartGame = () => {
+    restartButton.style.display = 'none'; // Hides the restart button
+    mario.src = '../Images/mario.gif'; // Changes Mario's image back to the initial state
+    gameLoop = setInterval(loop, 10); // Restarts the game loop
+};
 
-        clearInterval(loop);
+document.addEventListener('keydown', jump); // Listens for keydown events to make Mario jump
+restartButton.addEventListener('click', restartGame); // Listens for click events on the restart button
 
-}
+// Start game loop
+gameLoop = setInterval(loop, 10); // Starts the game loop
 
-}, 10);
 
-document.addEventListener('keydown', jump);
+
 
 
 

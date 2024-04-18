@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Contact Info</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+    <style>
+        /* Style for thank you message */
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-<body>
+<body id="body">
 
-
-    <div class="header">
-        <h1 class="subheadd"><b>Dev's World</b></h1>
-        <h2 class="subhead"><b>Contact us</b></h2>
-        <hr>
+    <header>
+        <!-- Title and navigation section -->
+        <div id="Title">
+            <img src="../Images/logo2.jpeg.jpg" alt="Logo">
+            <h1>Code Creatorrs</h1>
+        </div>
         <nav>
-            <ul id="mainMenu">
-                <li><a href="">Page 1</a></li>
-                <li><a href="">Page 2</a></li>
-                <li><a href="">Page 3</a></li>
-                <li><a href="">Page 4</a></li>
-            </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="MarioJump.html">Services</a></li>
+                <li><a href="Contact.html" id="contact-us-btn">Contact us</a></li>
+            </ul>            
         </nav>
-    </div>
-    
+    </header>
 
-    <!-- Formulário -->
-    <form>
+    <!-- Contact Form -->
+    <form id="contactForm">
         <div class="form">
+            <!-- Form fields -->
             <label for="yourName">Your Name*</label>
             <input type="text" id="yourName" name="yourName" required pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]{1,50}">
 
-            <label for="yourphonenumber">Your Phone Number*</label>
+            <label for="PhoneNumber">Your Phone Number*</label>
             <input type="tel" id="PhoneNumber" name="PhoneNumber" required pattern="[0-9]{1,10}">
 
-            <label for="youremail">Your email*</label>
-            <input type="email" id="yourEmail" name="yourEmail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+            <label for="yourEmail">Your email*</label>
+            <input type="email" id="yourEmail" name="yourEmail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
 
-            <label>How would you like us to contact you ?</label> 
+            <label>How would you like us to contact you?</label> 
             <input type="radio" name="contactMethod" value="Phone" required />Phone
             <input type="radio" name="contactMethod" value="Email" required />Email <br>
 
@@ -59,15 +69,45 @@
             <button type="submit">Submit</button>
         </div>
     </form>
-</div>
 
-<div class="imagem-container2">
-    <div class="imgs3">
-        <img src="../Images/Happy.png" alt="Face" />
+    <!-- Thank you message section -->
+    <div class="thank-you-message" id="thankYouMessage">
+        Thank you! We will contact you soon.
     </div>
-</div>
 
-<hr>
+    <!-- Image container -->
+    <div class="imagem-container2">
+        <div class="imgs3">
+            <img src="../Images/Happy.png" alt="Face" />
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- JavaScript for form submission handling -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Check if all form inputs are valid
+            const formInputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+            let isFormValid = true;
+            formInputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    isFormValid = false;
+                }
+            });
+
+            // If all fields are valid, display thank you message
+            if (isFormValid) {
+                document.getElementById('thankYouMessage').style.display = 'block';
+            }
+        });
+    </script>
 
 </body>
 </html>
+
+
+
+
