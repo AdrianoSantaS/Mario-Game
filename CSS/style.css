@@ -1,3 +1,263 @@
+@media screen and (max-width:760px) {
+    #body {
+        padding: 10px;
+        height: auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    #Title img {
+        width: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #main1 {
+        flex-direction: column;
+    }
+
+    h2 {
+        margin-top: 50px;
+        font-size: 36px;
+    }
+
+    #main1 img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #welcome_text {
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    .team_image,
+    .our_services {
+        flex-direction: column;
+    }
+
+    .team_image img,
+    .our_services img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        margin: 50px;
+        padding: 15px 0;
+        font-size: 14px;
+    }
+}
+
+/* media screen and (max-width:760px) */
+
+/* style.css */
+
+#body {
+
+    color: white;
+    font-family: Roboto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 1500px;
+    width: 100%;
+    background-image: url("../Images/Back.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* --------------Header------------------- */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --------------Title and Logo------------------- */
+.title {
+    flex-direction: column;
+    line-height: 5%;
+
+}
+
+#Title {
+    display: flex;
+    align-items: center;
+}
+
+#Title img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+h1 {
+    font-weight: 'Poppins', sans-serif;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #4680ad;
+    transition: 0.3s all;
+}
+
+#contact-us-btn {
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#contact-us-btn:hover {
+    background-color: #041c2f;
+    color: white;
+}
+
+/* --------------MAIN: index page ------------------- */
+#main1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-top: 100px;
+    font-size: 54px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#main1 img {
+    width: 700px;
+    margin-left: 50px;
+}
+
+#welcome_text {
+    max-width: 500px;
+    font-weight: bold;
+    color: #ccffcc;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo2 {
+    animation: moveLogo 3s;
+}
+
+@keyframes moveLogo {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* --------------MAIN: about_us page ------------------- */
+
+#main2 {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #071b43;
+}
+
+#main2 p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#main2 h2 {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Sumana', sans-serif;
+}
+
+#main2 img:hover {
+    transform: scale(1.1);
+    filter: brightness(150%);
+    box-shadow: 0px 4px 8px rgba(249, 245, 245, 0.791);
+}
+
+.team_image,
+.our_services {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800;
+    align-items: center;
+}
+
+.team_image img {
+    width: 300px;
+    height: 250px;
+    align-self: center;
+    margin-right: 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.our_services img {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    margin-right: 40px;
+}
+
+.services {
+    margin-top: 50px;
+}
+
+/* --------------FOOTER ------------------- */
+footer {
+    background-color: #0b0c21;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* end for 2 first pages */
+
+
+
+
 /* Reset default margin, padding, and box-sizing */
 * {
     margin: 0;
@@ -274,6 +534,10 @@ button:hover {
             text-align: center;
         }
 
+        #hide, #show {
+            margin-bottom: 30px; /* Adjust as necessary */
+        }
+        
 
  
    /* end navigation part*/ 

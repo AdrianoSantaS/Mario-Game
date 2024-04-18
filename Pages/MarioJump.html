@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">   
@@ -27,12 +28,21 @@
     
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
             <li><a href="MarioJump.html">Services</a></li>
             <li><a href="Contact.html" id="contact-us-btn">Contact us</a></li>
-        </ul>        
+        </ul>       
     </nav>
+
+    <!-- Super Mario Music -->
+    <audio controls>
+
+        <source src="../Music/01. Above Ground BGM.mp3" type="audio/mp3" autoplay loop>
+     
+    </audio>
+
+
 
     <!-- Game board with Mario, clouds, pipes, and restart button -->
     <div class="game-board">
@@ -45,24 +55,23 @@
     <!-- JavaScript file for game functionality -->
     <script src="../js/script.js" defer></script>
 
-   <!-- Ordered List -->
-   <ol>
-    <p>Commands: Use any button to jump. Don't hit the pipes. Have fun!!!</p>
+
+ <!-- Ordered List -->
+ <ol>
+    <p>Commands: Use space button to jump. Don't hit the pipes. Have fun!!!</p>
    </ol>
-
-   <!-- Super Mario Music -->
-   <audio controls>
-
-   <source src="../Music/01. Above Ground BGM.mp3" type="audio/mp3" autoplay loop>
-
-   </audio>
-
-
+   
    <button id="hide">Hide</button>
-   <button id="show">Show</button>
+   <button id="show">Show</button><br>
+
+   <footer>
+    <p> © 2024 "colocar nosso site". All rights reserved. </p>
+    <p>Designed by Adriano </p>
+   </footer>
 
 </body>
 </html>
+
 
 
 
