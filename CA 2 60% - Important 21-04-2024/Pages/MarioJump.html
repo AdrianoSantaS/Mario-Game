@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+    </script>
     <title>Mario Jump</title>
 </head>
 <body id="Mario">
@@ -36,7 +47,7 @@
 
    <!-- Ordered List -->
    <ol>
-    <li>Commands: Use any button to jump. Don't hit the pipes. Have fun!!!</li>
+    <p>Commands: Use any button to jump. Don't hit the pipes. Have fun!!!</p>
    </ol>
 
    <!-- Super Mario Music -->
@@ -45,6 +56,10 @@
    <source src="../Music/01. Above Ground BGM.mp3" type="audio/mp3" autoplay loop>
 
    </audio>
+
+
+   <button id="hide">Hide</button>
+   <button id="show">Show</button>
 
 </body>
 </html>
