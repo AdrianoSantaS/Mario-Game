@@ -1,83 +1,25 @@
-@media screen and (max-width:760px) {
-    #body {
-        padding: 10px;
-        height: auto;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    ul {
-        text-align: center;
-    }
-
-    #Title img {
-        width: 30px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    #main1 {
-        flex-direction: column;
-    }
-
-    h2 {
-        margin-top: 50px;
-        font-size: 36px;
-    }
-
-    #main1 img {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    #welcome_text {
-        max-width: 100%;
-        font-size: 18px;
-    }
-
-    .team_image,
-    .our_services {
-        flex-direction: column;
-    }
-
-    .team_image img,
-    .our_services img {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    footer {
-        margin: 50px;
-        padding: 15px 0;
-        font-size: 14px;
-    }
-}
-
-/* media screen and (max-width:760px) */
-
 /* style.css */
+/*There is only 1 external CSS file for all pages and All pages are responsive. */
 
-#body {
+
+/* --------------Defining body for the index, about_us and contact_us page--------------- */
+
+#body1 {
 
     color: white;
-    font-family: Roboto;
-    max-width: 1200px;
+    font-family:'Roboto', sans-serif;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 20px;
-    height: 1500px;
+    height: 1800px;
     width: 100%;
     background-image: url("../Images/Back.jpeg");
     background-size: cover;
     background-position: center;
 }
 
-/* --------------Header------------------- */
+
+/* --------------Header for all pages---------------------------- */
 header {
     display: flex;
     flex-direction: row;
@@ -85,11 +27,10 @@ header {
     align-items: center;
 }
 
-/* --------------Title and Logo------------------- */
+/* --------------Title and Logo-------------------------------- */
 .title {
     flex-direction: column;
     line-height: 5%;
-
 }
 
 #Title {
@@ -133,31 +74,42 @@ a:hover {
 }
 
 /* --------------MAIN: index page ------------------- */
+
+/* Displaying flex the aside and article parts  */
 #main1 {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
 }
 
-h2 {
-    margin-top: 100px;
-    font-size: 54px;
+#main1 h2 {
+    margin-top: 200px;
+    font-size: 56px;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
+    margin-left: 75px;
 }
 
 #main1 img {
-    width: 700px;
-    margin-left: 50px;
-}
+    width: 775px;
+    margin-left:0;
 
+}
+/*---Styling the text that is inserted in JavaScript.------*/
 #welcome_text {
     max-width: 500px;
     font-weight: bold;
-    color: #ccffcc;
+    color: #aef7ae;
     font-family: 'Roboto', sans-serif;
+    margin-left: 75px;
+    font-size: 26px;
+    line-height: 1.6;
+}
+.underline {
+    text-decoration: underline;
 }
 
+/*---- Adding animation to the image in the main section.--- */
 .logo2 {
     animation: moveLogo 3s;
 }
@@ -176,11 +128,11 @@ h2 {
     }
 }
 
-/* --------------MAIN: about_us page ------------------- */
+/* --------------MAIN_2: about_us page ------------------- */
 
 #main2 {
-    padding: 0 20px;
-    max-width: 1200px;
+    padding: 0 30px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -188,12 +140,16 @@ h2 {
     align-items: center;
     margin-top: 30px;
     background-color: #071b43;
+    padding-bottom: 100px
 }
+/* ----------------------Title and text ------------------ */
 
-#main2 p {
+.our_team p{
     font-size: 20px;
     line-height: 1.6;
     text-align: center;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #main2 h2 {
@@ -201,8 +157,11 @@ h2 {
     max-width: 600px;
     text-align: center;
     font-family: 'Sumana', sans-serif;
+    font-size: 48px;
+    margin-top: 50px;
+    text-decoration: underline;
 }
-
+/* -----------------------Main2 Images  ------------------ */
 #main2 img:hover {
     transform: scale(1.1);
     filter: brightness(150%);
@@ -240,7 +199,7 @@ h2 {
     margin-top: 50px;
 }
 
-/* --------------FOOTER ------------------- */
+/* --------------------------FOOTER ------------------- */
 footer {
     background-color: #0b0c21;
     color: #fff;
@@ -253,9 +212,10 @@ footer {
     z-index: 999;
 }
 
-/* end for 2 first pages */
+/*--------------END (Index and about_us page developed by Cindy----------------- */
 
 
+/*------------------------- MarioJump and Contact pages------------------------ */
 
 
 /* Reset default margin, padding, and box-sizing */
@@ -346,9 +306,7 @@ footer {
  #restartButton {
     display: none;
 }
-
-
-    /* end page game */
+/*------------------------- end page game----------------------------- */
 
 
 
@@ -449,10 +407,7 @@ button:hover {
 }
 
 
-
-    /* end page contact */
-
-
+/*--------------END (MarioJump and contact pages developed by Adriano----------------- */
 
     #body {
         color: white; /* Text color */
@@ -479,12 +434,12 @@ button:hover {
         line-height: 5%; /* Line height */
     }
     
-    #Title {
+    #Title1 {
         display: flex; /* Use flexbox */
         align-items: center; /* Center align items vertically */
     }
     
-    #Title img {
+    #Title1 img {
         width: 50px; /* Logo width */
         height: auto; /* Maintain aspect ratio */
         margin-right: 10px; /* Margin right for spacing */
@@ -522,7 +477,7 @@ button:hover {
     }
 
         /* Center align Title */
-        #Title {
+        #Title1 {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -540,4 +495,67 @@ button:hover {
         
 
  
-   /* end navigation part*/ 
+  /*-------------- Media screen ---------- */
+
+   @media only screen and (max-width:760px) {
+    #body1 {
+        padding: 10px;
+        height: auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    #Title img {
+        width: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #main1 {
+        flex-direction: column;
+    }
+
+    h2 {
+        margin-top: 50px;
+        font-size: 36px;
+    }
+
+    #main1 img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #welcome_text {
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    .team_image,
+    .our_services {
+        flex-direction: column;
+    }
+
+    .team_image img,
+    .our_services img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        margin: 50px;
+        padding: 15px 0;
+        font-size: 14px;
+    }
+}
+
+/*-------------- END---------- */

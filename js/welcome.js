@@ -9,9 +9,17 @@ function Welcome_Text (){
         container.innerHTML += text.charAt (index);
         index++;
         setTimeout(Welcome_Text, 30);
+    } else {
+        underlineLastWord();
     }
 }
-container.style.fontSize = "20px";
-
+function underlineLastWord() {
+    const words = text.split(" ");
+    const lastWord = words[words.length - 1];
+    const lastIndex = container.innerHTML.lastIndexOf(lastWord);
+    const newHTML = container.innerHTML.substring(0, lastIndex) +
+        "<span class='underline'>" + lastWord + "</span>";
+    container.innerHTML = newHTML;
+}
 
 Welcome_Text();
